@@ -6,6 +6,7 @@ Este √© um aplicativo desenvolvido com Jetpack Compose e GPUImage para manipula√
 - Android SDK | Kotlin | MVVM + Clean Architecture
 - GPUImage
 - Services
+- Content Provider
 - Jetpack Compose
 - StateFlow, MutableStateFlow
 - Navigation Compose
