@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="grant_access_gallery">Liberar acesso à Galeria</string>
+    <string name="error_in_load_images">Erro ao carregar imagens</string>
+    <string name="welcome_part_1">"Bem vindo(a), "</string>
+    <string name="welcome_part_2">, faça lindas fotos!</string>
+    <string name="invalid_id">Id inválido</string>
+    <string name="invalid_user_name">Nome inválido</string>
+    <string name="invalid_email">Email Inválido</string>
+    <string name="save">Salvar</string>
+    <string name="success_save">Imagem Salva</string>
+    <string name="error_save">Erro ao Salvar</string>
+    <string name="log_out">Sair</string>
+    <string name="edit_picture">Editar Foto</string>
+    <string name="name">Nome</string>
+    <string name="email">Email</string>
+    <string name="info">"Info: "</string>
+    <string name="success">"Sucesso: "</string>
+    <string name="error">"Error: "</string>
+    <string name="reset_your_password">Restaurar sua senha</string>
+    <string name="send_reset_link">Enviar link de restauração</string>
+    <string name="password">Senha</string>
+    <string name="log_in">Entrar</string>
+    <string name="forgot_password">Esqueci a senha</string>
+    <string name="create_account">Criar Conta</string>
+    <string name="create_your_account">Criar sua Conta</string>
+    <string name="confirm_password">Confirmar Senha</string>
+    <string name="sign_up">Cadastrar-se</string>
+    <string name="invalid_entry_name">Nome inválido</string>
+    <string name="invalid_entry_email">Email Inválido</string>
+    <string name="invalid_entry_password">A senha deve conter 6 ou mais caracteres</string>
+    <string name="invalid_entry_match">As senhas não se correspondem</string>
+    <string name="email_send">Email enviado</string>
+    <string name="error_sending_email">Falha ao enviar email</string>
+    <string name="auth_error">Falha na Autenticação</string>
+    <string name="verification_email_required">Você precisa verificar seu email!</string>
+    <string name="verification_email_sent">Email de Confirmação eviado</string>
+    <string name="verification_email_sent_error">Falha ao enviar email de confirmação.</string>
+</resources>

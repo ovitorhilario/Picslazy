@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name" translatable="false">picslazy</string>
+    <string name="app_name_uppercase" translatable="false">PICSLAZY</string>
+    <string name="grant_access_gallery">" Grant access to the Gallery"</string>
+    <string name="error_in_load_images">Error in Load Images</string>
+    <string name="welcome_part_1">"Welcome, "</string>
+    <string name="welcome_part_2">, make beautiful pictures!</string>
+    <string name="invalid_id">Invalid Id</string>
+    <string name="invalid_user_name">Invalid User Name</string>
+    <string name="invalid_email">Invalid Email</string>
+    <string name="save">Save</string>
+    <string name="success_save">Saved Image</string>
+    <string name="error_save">Error to Save</string>
+    <string name="log_out">Log out</string>
+    <string name="edit_picture">Edit Picture</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="info">"Info: "</string>
+    <string name="success">"Success: "</string>
+    <string name="error">"Error: "</string>
+    <string name="reset_your_password">Reset your password</string>
+    <string name="send_reset_link">Send reset link</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log in</string>
+    <string name="forgot_password">Forgot Password</string>
+    <string name="create_account">Create Account</string>
+    <string name="create_your_account">Create your Account</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="sign_up">Sign up</string>
+    <string name="invalid_entry_name">Invalid Name</string>
+    <string name="invalid_entry_email">Invalid Email</string>
+    <string name="invalid_entry_match">Passwords do not match</string>
+    <string name="invalid_entry_password">Password must contain 6 or more characters</string>
+    <string name="email_send">Email Send</string>
+    <string name="error_sending_email">Failed to send email</string>
+    <string name="auth_error">Authentication Failure</string>
+    <string name="verification_email_required">" You need to verify your email!"</string>
+    <string name="verification_email_sent">Confirmation email sent</string>
+    <string name="verification_email_sent_error">Failed to send confirmation email.</string>
+</resources>
