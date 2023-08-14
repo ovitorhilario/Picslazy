@@ -4,7 +4,7 @@
     <string name="grant_access_gallery">" Grant access to the Gallery"</string>
     <string name="error_in_load_images">Error in Load Images</string>
     <string name="welcome_part_1">"Welcome, "</string>
-    <string name="welcome_part_2">, make beautiful pictures!</string>
+    <string name="welcome_part_2">Make beautiful pictures!</string>
     <string name="invalid_id">Invalid Id</string>
     <string name="invalid_user_name">Invalid User Name</string>
     <string name="invalid_email">Invalid Email</string>

@@ -3,7 +3,7 @@
     <string name="grant_access_gallery">Liberar acesso à Galeria</string>
     <string name="error_in_load_images">Erro ao carregar imagens</string>
     <string name="welcome_part_1">"Bem vindo(a), "</string>
-    <string name="welcome_part_2">, faça lindas fotos!</string>
+    <string name="welcome_part_2">Faça belas edições!</string>
     <string name="invalid_id">Id inválido</string>
     <string name="invalid_user_name">Nome inválido</string>
     <string name="invalid_email">Email Inválido</string>
