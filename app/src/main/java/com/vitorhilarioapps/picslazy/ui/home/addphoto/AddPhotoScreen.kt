@@ -1,6 +1,7 @@
 package com.vitorhilarioapps.picslazy.ui.home.addphoto
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.net.Uri
 import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -18,6 +19,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -37,6 +39,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ColorFilter
 import androidx.compose.ui.layout.ContentScale
@@ -48,6 +51,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Density
@@ -72,6 +76,7 @@ import com.vitorhilarioapps.picslazy.common.designsystem.widgets.TopBarMenu
 import com.vitorhilarioapps.picslazy.common.model.Events
 import com.vitorhilarioapps.picslazy.common.singletons.Args
 
+@SuppressLint("ResourceType")
 @Composable
 fun AddPhotoScreen(
     viewModel: AddPhotoViewModel = hiltViewModel<AddPhotoViewModel>(),
@@ -96,49 +101,78 @@ fun AddPhotoScreen(
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-            TopBarMenu(onClick = onOpenProfile)
+            TopBarMenu(onClick = onOpenProfile, textCenter = stringResource(id = R.string.welcome_part_1) + userState.name)
 
-            Spacer(modifier = Modifier.height(8.dp))
+            Spacer(modifier = Modifier.height(4.dp))
+
+            Box(modifier = Modifier
+                .padding(horizontal = 32.dp)
+                .fillMaxWidth()
+                .height(140.dp)
+                .clip(RoundedCornerShape(15))
+            ) {
+                Image(
+                    modifier = Modifier.fillMaxSize(),
+                    painter = painterResource(id = R.raw.banner_home),
+                    contentScale = ContentScale.Crop,
+                    contentDescription = null,
+                )
+
+                Box(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .background(
+                            Brush.horizontalGradient(listOf(Color.Transparent, Color.Black))
+                        )
+                        .align(Alignment.Center)
+                )
+
+                Text(
+                    modifier = Modifier
+                        .padding(end = 8.dp)
+                        .width(130.dp)
+                        .align(Alignment.CenterEnd),
+                    text = stringResource(id = R.string.welcome_part_2),
+                    fontSize = Typography.titleSmall.fontSize,
+                    fontWeight = FontWeight.Medium,
+                    lineHeight = Typography.titleSmall.lineHeight,
+                    textAlign = TextAlign.Start,
+                    color = Color.White
+                )
+            }
+
+            Spacer(modifier = Modifier.height(4.dp))
 
             Row(
                 modifier = Modifier
                     .padding(horizontal = 32.dp)
                     .fillMaxWidth()
-                    .height(120.dp)
-                    .background(mLightGray, RoundedCornerShape(25))
-                    .padding(horizontal = 16.dp, vertical = 8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                horizontalArrangement = Arrangement.spacedBy(16.dp)
+                    .wrapContentHeight(),
+                horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
+                verticalAlignment = Alignment.CenterVertically
             ) {
 
-                val welcomeComposition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.animation_edit))
+                Text(
+                    text = "Vamos começar?",
+                    fontSize = Typography.bodyMedium.fontSize,
+                    fontWeight = FontWeight.Medium,
+                    maxLines = 1
+                )
+
+                val composition by rememberLottieComposition(LottieCompositionSpec.RawRes(R.raw.animation_emoji_love))
 
                 LottieAnimation(
-                    modifier = Modifier.weight(1f),
-                    composition = welcomeComposition,
+                    modifier = Modifier
+                        .size(48.dp),
+                    composition = composition,
                     iterations = LottieConstants.IterateForever,
-                    speed = 0.5f
+                    contentScale = ContentScale.Crop
                 )
-                    
-                Column(
-                    modifier = Modifier.weight(1f),
-                ) {
-                    Text(
-                        text = buildAnnotatedString {
-                            append(stringResource(R.string.welcome_part_1))
-                            withStyle(style = SpanStyle(fontWeight = FontWeight.Medium)) {
-                                append(userState.name)
-                            }
-                            append(stringResource(R.string.welcome_part_2))
-                        },
-                        fontSize = Typography.bodySmall.fontSize,
-                        fontStyle = Typography.bodySmall.fontStyle,
-                        lineHeight = Typography.bodySmall.lineHeight
-                    )
-                }
             }
 
-            Spacer(modifier = Modifier.height(16.dp))
+            Spacer(modifier = Modifier.height(4.dp))
+
+            Divider(modifier = Modifier.padding(horizontal = 32.dp).fillMaxWidth())
 
             LazyColumn(
                 modifier = Modifier
